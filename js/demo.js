@@ -244,7 +244,7 @@
       ["İndirin", "Tutanak_Kurulum ve/veya Kamera_Kurulum paketini indirin.", () => `<p><b>Kurulum paketi indiriliyor…</b></p><div class="kp-bar" id="kpB"><i></i></div><p>${P[0] ? P[0].dosya + " · " + mb(P[0].boyut) : "Tutanak_Kurulum.exe"}</p>`, "İleri"],
       ["SHA-256 değerini doğrulayın", "PowerShell’de Get-FileHash ile sonucu bu sayfadaki değerle karşılaştırın.", () => `<p><b>Doğrulama</b></p><code>Get-FileHash .\\${P[0] ? P[0].dosya : "Tutanak_Kurulum.exe"} -Algorithm SHA256</code><p>Çıktı, sitedeki değerle <b>aynı</b> olmalıdır:</p><code>${P[0] ? P[0].sha256 : "…"}</code>`, "İleri"],
       ["Kurulum sihirbazını çalıştırın", "Klasör, masaüstü simgesi ve Windows ile başlatma seçeneklerini belirleyin.", () => `<p><b>Kurulum türü</b></p><p>☑ Masaüstü simgesi oluştur<br>☐ Windows ile birlikte başlat<br>☑ Başlat menüsüne ekle</p><div class="kp-bar dolu"><i></i></div><p>Dosyalar kopyalanıyor… Kurulum tamam.</p>`, "Bitir"],
-      ["Lisansı etkinleştirin", "Cihaz kodunuzu paylaşın, etkinleştirme kodunu girin. Deneme için kod gerekmez.", () => `<p><b>Lisans</b></p><code>Cihaz kodu: 7F3A-91C2-0B4E-D5A8</code><code>Etkinleştirme kodu: TA-••••-••••-••••</code><p>✓ Lisans etkin. Arşiv klasörünü seçin ve parola belirleyin.</p>`, "Başla"]
+      ["Lisansı etkinleştirin", "Cihaz kodunuzu paylaşın, etkinleştirme kodunu girin. Deneme lisansı için kodu bizden isteyin.", () => `<p><b>Lisans</b></p><code>Cihaz kodu: 7F3A-91C2-0B4E-D5A8</code><code>Etkinleştirme kodu: TA-••••-••••-••••</code><p>✓ Lisans etkin. Arşiv klasörünü seçin ve parola belirleyin.</p>`, "Başla"]
     ];
     let si = 0, oto;
     const goster = () => {

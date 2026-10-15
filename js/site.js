@@ -82,7 +82,7 @@
   const dd = $("#denemeDugme");
   if (!dd) return;
   const dugme = (metin, href, ikinci) => { const a = document.createElement("a"); a.className = "dugme" + (ikinci ? " dugme-ikinci" : ""); a.textContent = metin; a.href = href; return a; };
-  if (S.indirmeUrl) dd.append(dugme("Deneme sürümünü indir", S.indirmeUrl));
+  if (S.indirmeUrl) dd.append(dugme("Kurulum paketine git", "#indir"));
   else { const a = dugme("Çok yakında", "#"); a.setAttribute("aria-disabled", "true"); dd.append(a); }
   if (S.eposta) dd.append(dugme("E-posta ile ulaşın", "mailto:" + S.eposta + "?subject=" + encodeURIComponent("Tutanak ve Delil Arşiv Sistemi — deneme talebi"), true));
   if (S.whatsapp) dd.append(dugme("WhatsApp", "https://wa.me/" + S.whatsapp, true));
